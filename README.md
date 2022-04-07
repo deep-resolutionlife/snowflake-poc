@@ -1,5 +1,13 @@
 # Snowflake POC
 
+## Why?
+- Can Stored Proc be executed from an API?
+- Establish that connecting to Snowflake is easy.
+
+## Limitation of this code
+- This doesn't use ConnectionPool, though it can be easily implemented.
+- Stored Proc is not being created from this code
+
 ## Pre-requisite
 
 Create a Stored Procedure in your DATABASE, in your SCHEMA
