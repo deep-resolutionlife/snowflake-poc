@@ -13,7 +13,7 @@
 Create a Stored Procedure in your DATABASE, in your SCHEMA
 
 ```
-CREATE OR REPLACE PROCEDURE DEEP.PUBLIC."SP_PI"()
+CREATE OR REPLACE PROCEDURE <DATABASE>.<SCHEMA>."SP_PI"()
 RETURNS FLOAT
 LANGUAGE JAVASCRIPT
 EXECUTE AS OWNER
@@ -35,7 +35,7 @@ AS 'return 3.1415926;';
     schema="<your-schema>"
     ```
 - Run following command to see it in action
-    ```npm run```
+    ```npm start```
 
 ## Output
 

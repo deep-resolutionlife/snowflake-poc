@@ -3,7 +3,6 @@ const { getConnection, terminateConnection } = require("./connection");
 
 const query = async() => {
 
-    var result = null;
     var connection = null;
 
     try {
@@ -12,7 +11,7 @@ const query = async() => {
         return await connection.execute({
             sqlText: 'CALL SP_PI()',
             streamResult: true,
-            complete: function(err, stmt, rows) {
+            complete: function (err, stmt, rows) {
               rows = [];
               stmt.streamRows({
                 start: 0,
@@ -36,7 +35,11 @@ const query = async() => {
         console.log("error: ", e);
         throw new Error(e.message);
     } finally {
+
+      setTimeout(() => {
         terminateConnection(connection);
+      }, 2000);
+
     }
 
 }
