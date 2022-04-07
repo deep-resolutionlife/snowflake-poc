@@ -28,3 +28,7 @@ AS 'return 3.1415926;';
     ```
 - Run following command to see it in action
     ```npm run```
+
+## Output
+
+![This is the output on console](./assets/images/output.png)
